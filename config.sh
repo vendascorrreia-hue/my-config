@@ -1,4 +1,4 @@
-sudo pacman -S --no-confirm --nedeed git base-devel dotnet-sdk python gcc rust go hyprland hyprpaper kate nano wofi firefox tlp tlp-rwm mpv kitty dolphin
+sudo pacman -S  --nedeed git base-devel dotnet-sdk python gcc rust go hyprland hyprpaper kate nano wofi firefox tlp tlp-rwm mpv kitty dolphin
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -864,7 +864,7 @@ cat <<'EOF' > /etc/xdg/waybar/config.jsonc
     }
 }
 EOF
-yay -S --no-confirm onlyoffice-bin visual-studio-code-bin
+yay -S --nedeed onlyoffice-bin visual-studio-code-bin
 sudo pacman -S sddm plymouth waybar btop 
 sudo systemctl enable sddm
 sudo plymouth-set-default-theme -R bgrt
