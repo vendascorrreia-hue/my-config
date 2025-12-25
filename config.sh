@@ -1,4 +1,4 @@
-sudo pacman -S --no-confirm --nedeed git base-devel dotnet-sdk openjdk python gcc rust go hyprland waybar hyprpaper kate nano wofi firefox tlp tlp-rwm mpv kitty
+sudo pacman -S --no-confirm --nedeed git base-devel dotnet-sdk python gcc rust go hyprland hyprpaper kate nano wofi firefox tlp tlp-rwm mpv kitty dolphin
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -319,7 +319,7 @@ windowrule = suppressevent maximize, class:.*
 # Fix some dragging issues with XWayland
 windowrule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
 EOF
-mkdir -p /etc/xdg/waybar
+sudo mkdir -p /etc/xdg/waybar
 cat <<'EOF' > /etc/xdg/waybar/style.css
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -865,7 +865,7 @@ cat <<'EOF' > /etc/xdg/waybar/config.jsonc
 }
 EOF
 yay -S --no-confirm onlyoffice-bin visual-studio-code-bin
-sudo pacman -S sddm plymouth
+sudo pacman -S sddm plymouth waybar btop 
 sudo systemctl enable sddm
 sudo plymouth-set-default-theme -R bgrt
 echo foi um sucesso
